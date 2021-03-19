@@ -1,0 +1,35 @@
+total = float(input(""))
+auxiliar = total
+auxiliar = int(auxiliar)
+#notas 
+notas100 = int(auxiliar//100)
+notas50 = int((auxiliar%100)//50)
+notas20 = int(((auxiliar%100)%50)//20)
+notas10 = int((((auxiliar%100)%50)%20)//10)
+notas5 = int(((((auxiliar%100)%50)%20)%10)//5)
+notas2 = int((((((auxiliar%100)%50)%20)%10)%5)//2)
+auxiliar2 = ((notas100*100)+(notas50*50)+(notas20*20)+(notas10*10)+(notas5*5)+(notas2*2))
+auxiliar = total-auxiliar2
+auxiliar = auxiliar*100
+#moedas
+moedas1 = int(auxiliar//100)
+moedas50 = int((auxiliar%100)//50)
+moedas25 = int(((auxiliar%100)%50)//25)
+moedas10 = int((((auxiliar%100)%50)%25)//10)
+moedas5 = int(((((auxiliar%100)%50)%25)%10)//5)
+moedas01 = int((((((auxiliar%100)%50)%25)%10)%5)//1)
+#print
+print("NOTAS:")
+print(str(notas100) + " nota(s) de R$ 100.00")
+print(str(notas50) + " nota(s) de R$ 50.00")
+print(str(notas20) + " nota(s) de R$ 20.00")
+print(str(notas10) + " nota(s) de R$ 10.00")
+print(str(notas5) + " nota(s) de R$ 5.00")
+print(str(notas2) + " nota(s) de R$ 2.00")
+print("MOEDAS:")
+print(str(moedas1) + " moeda(s) de R$ 1.00")
+print(str(moedas50) + " moeda(s) de R$ 0.50")
+print(str(moedas25) + " moeda(s) de R$ 0.25")
+print(str(moedas10) + " moeda(s) de R$ 0.10")
+print(str(moedas5) + " moeda(s) de R$ 0.05")
+print(str(moedas01) + " moeda(s) de R$ 0.01")
