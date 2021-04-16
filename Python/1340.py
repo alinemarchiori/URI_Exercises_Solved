@@ -1,4 +1,3 @@
-
 while True:
     try:
         pilha, fila, fila_prioridade = [], [], []
@@ -9,7 +8,7 @@ while True:
         for i in range(vezes):
             instruc,element = input().split()
 
-            if instruc == '1':
+            if instruc == '1': #se for um adiciona o elemento nas estruturas
                 contador += 1
                 pilha.append(int(element))
                 fila.append(int(element))
@@ -33,16 +32,16 @@ while True:
 
         if (pi and fi) or (pi and fipi) or (fi and fipi):
             nome = 'not sure'
-            
+            # Não pode ser pilha nem fila nem fila de prioridade 
         elif pi:
             nome = 'stack'
-
+            # É uma pilha
         elif fipi:
             nome = 'priority queue'
-
+            # É fila de prioridade 
         elif fi:
             nome = 'queue'
-
+            # É fila
         else:
             nome = 'impossible'
         
