@@ -10,16 +10,6 @@ class Grafo:
     def adiciona_aresta(self, u, v):
         self.grafo[u].append(v)
         self.grafo[v].append(u)
-    
-    def retorna(self):
-        return self.grafo
-
-    def mostra_lista(self):
-        for i in range(self.vertices):
-            print(self.chaves[i], end = " --> ")
-            for i in self.grafo[i]:
-                print(self.chaves[i], end = "  ")
-            print("")
 
     def dicionario(self, dicionario):
         self.chaves = list(dicionario.keys())
@@ -29,9 +19,7 @@ class Grafo:
         self.contador += 1
         visitados = [-1] * self.vertices
         distancias = [0] * self.vertices
-        vertice_pai = [0] * self.vertices
         visitados[origem] = origem
-        vertice_pai[0] = 0
         distancias[0] = 0
         fila = [origem]
         while fila:
@@ -40,7 +28,6 @@ class Grafo:
                 if visitados[i] < 0:
                     fila.append(i)
                     visitados[i] = i
-                    vertice_pai[i] = vertice
                     distancias[i] = distancias[vertice] + 1
         self.distancia_minima_entrada = self.distancia_minima_entrada + distancias[self.indice_asterisco]
         if self.contador == 2:
