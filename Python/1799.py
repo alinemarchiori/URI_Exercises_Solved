@@ -45,33 +45,7 @@ class Grafo:
         self.distancia_minima_entrada = self.distancia_minima_entrada + distancias[self.indice_asterisco]
         if self.contador == 2:
             print(self.distancia_minima_entrada)
-'''        
-        print(distancias)
-        print(vertice_pai)
-        print(visitados)
-        print(self.distancia_minima_entrada, self.indice_asterisco)
-          
-        else:
-            visitados = [-1] * self.vertices
-            distancias = [0] * self.vertices
-            vertice_pai = [0] * self.vertices
-            visitados[origem] = origem
-            vertice_pai[0] = 0
-            distancias[0] = 0
-            fila = [origem]
-            while fila:
-                vertice = fila.pop(0)
-                for i in self.grafo[vertice]:
-                    if visitados[i] < 0:
-                        fila.append(i)
-                        visitados[i] = i
-                        vertice_pai[i] = vertice
-                        distancias[i] = distancias[vertice] + 1
-            distancia_minima = distancias[self.chaves.index("*")]
-            print(distancias)
-            print(vertice_pai)
-            print(visitados)
-'''
+
 vertices, arestas = input().split()
 vertice = int(vertices)
 arestas = int(arestas)
@@ -89,9 +63,6 @@ for i in range(arestas):
         cont += 1 
     grafo.adiciona_aresta(dicionario[a], dicionario[b])
 
-
-#print(dicionario)
 grafo.dicionario(dicionario)
 grafo.bfs(dicionario["Entrada"])
 grafo.bfs(dicionario["Saida"])
-#grafo.mostra_lista()
